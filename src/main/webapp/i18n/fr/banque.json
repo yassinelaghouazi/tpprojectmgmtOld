@@ -1,0 +1,26 @@
+{
+  "btpprojectApp": {
+    "banque": {
+      "home": {
+        "title": "Banques",
+        "createLabel": "Créer un nouveau Banque",
+        "createOrEditLabel": "Créer ou éditer un Banque",
+        "search": "Recherche pour Banque",
+        "notFound": "Aucun Banque trouvé"
+      },
+      "created": "Un nouveau Banque a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Banque avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Banque avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Banque {{ id }} ?"
+      },
+      "detail": {
+        "title": "Banque"
+      },
+      "banque": "Banque",
+      "contactEmail": "Contact Email",
+      "contactTel": "Contact Tel",
+      "adresseAgence": "Adresse Agence"
+    }
+  }
+}

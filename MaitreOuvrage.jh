@@ -1,0 +1,6 @@
+entity MaitreOuvrage{
+  nom String,
+  email String,
+  tel String,
+  contactPersonne String
+  }

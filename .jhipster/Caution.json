@@ -1,0 +1,82 @@
+{
+    "name": "Caution",
+    "fields": [
+        {
+            "fieldName": "numeroCaution",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "numeroAppelOffre",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "numeroMarche",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "objetCaution",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "typeCaution",
+            "fieldType": "TypeCaution",
+            "fieldValues": "PROVISOIRE,DEFINITIVE"
+        },
+        {
+            "fieldName": "montantCaution",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "statusCaution",
+            "fieldType": "StatusCaution",
+            "fieldValues": "DEMANDEE,DEPOSEE,RETOURNEE"
+        },
+        {
+            "fieldName": "dateDemande",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "dateRetrait",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "dateDepot",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipName": "banque",
+            "otherEntityName": "banque",
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": [
+                "required"
+            ],
+            "otherEntityField": "banque",
+            "otherEntityRelationshipName": "caution"
+        },
+        {
+            "relationshipName": "maitreOuvrage",
+            "otherEntityName": "maitreOuvrage",
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": [
+                "required"
+            ],
+            "otherEntityField": "nom",
+            "otherEntityRelationshipName": "caution"
+        }
+    ],
+    "changelogDate": "20200319154500",
+    "entityTableName": "caution",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*",
+    "searchEngine": "elasticsearch",
+    "databaseType": "sql"
+}

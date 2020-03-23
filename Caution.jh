@@ -1,0 +1,25 @@
+enum StatusCaution {
+  DEMANDEE,
+  DEPOSEE ,
+  RETOURNEE 
+}
+
+
+enum TypeCaution {
+  PROVISOIRE,
+  DEFINITIVE
+}
+
+entity Caution {
+  numeroCaution String,
+  numeroAppelOffre String,
+  numeroMarche String,
+  objetCaution String,
+  typeCaution TypeCaution,
+  montantCaution Double,
+  statusCaution StatusCaution,
+  dateDemande LocalDate,
+  dateRetrait LocalDate,
+  dateDepot LocalDate    
+  
+  }

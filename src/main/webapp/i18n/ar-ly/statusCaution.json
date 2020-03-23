@@ -1,0 +1,10 @@
+{
+  "btpprojectApp": {
+    "StatusCaution": {
+      "null": "",
+      "DEMANDEE": "DEMANDEE",
+      "DEPOSEE": "DEPOSEE",
+      "RETOURNEE": "RETOURNEE"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "btpprojectApp": {
+    "opportunity": {
+      "home": {
+        "title": "Opportunities",
+        "createLabel": "Créer un nouveau Opportunity",
+        "createOrEditLabel": "Créer ou éditer une opportunité d'affaire",
+        "search": "Recherche pour Opportunity",
+        "notFound": "Aucun Opportunity trouvé"
+      },
+      "created": "Un nouveau Opportunity a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Opportunity avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Opportunity avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Opportunity {{ id }} ?"
+      },
+      "detail": {
+        "title": "Opportunity"
+      },
+      "numeroAppelOffre": "N° de l'A.O",
+      "dateRemisePlis": "Date de remise de plis",
+      "montantCaution": "Montant de la caution",
+      "objetAffaire": "Objet de l'affaire",
+      "estimationBudget": "Estimation du budget",
+      "commentaires": "Commentaires",
+      "maitreOuvrage": "Maitre d'ouvrage",
+      "caution": "Caution"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="maitreOuvrage">
+            <h2><span jhiTranslate="btpprojectApp.maitreOuvrage.detail.title">Maitre Ouvrage</span> {{ maitreOuvrage.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="btpprojectApp.maitreOuvrage.nom">Nom</span></dt>
+                <dd>
+                    <span>{{ maitreOuvrage.nom }}</span>
+                </dd>
+                <dt><span jhiTranslate="btpprojectApp.maitreOuvrage.email">Email</span></dt>
+                <dd>
+                    <span>{{ maitreOuvrage.email }}</span>
+                </dd>
+                <dt><span jhiTranslate="btpprojectApp.maitreOuvrage.tel">Tel</span></dt>
+                <dd>
+                    <span>{{ maitreOuvrage.tel }}</span>
+                </dd>
+                <dt><span jhiTranslate="btpprojectApp.maitreOuvrage.contactPersonne">Contact Personne</span></dt>
+                <dd>
+                    <span>{{ maitreOuvrage.contactPersonne }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/maitre-ouvrage', maitreOuvrage.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

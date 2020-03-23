@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <!--
+        Added the constraints for entity Caution.
+    -->
+    <changeSet id="20200319154500-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="banque_id"
+                                 baseTableName="caution"
+                                 constraintName="fk_caution_banque_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="banque"/>
+
+        <addForeignKeyConstraint baseColumnNames="maitre_ouvrage_id"
+                                 baseTableName="caution"
+                                 constraintName="fk_caution_maitre_ouvrage_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="maitre_ouvrage"/>
+
+    </changeSet>
+</databaseChangeLog>

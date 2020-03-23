@@ -1,0 +1,62 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="opportunity">
+            <h2><span jhiTranslate="btpprojectApp.opportunity.detail.title">Opportunity</span> {{ opportunity.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="btpprojectApp.opportunity.numeroAppelOffre">Numero Appel Offre</span></dt>
+                <dd>
+                    <span>{{ opportunity.numeroAppelOffre }}</span>
+                </dd>
+                <dt><span jhiTranslate="btpprojectApp.opportunity.dateRemisePlis">Date Remise Plis</span></dt>
+                <dd>
+                    <span>{{ opportunity.dateRemisePlis }}</span>
+                </dd>
+                <dt><span jhiTranslate="btpprojectApp.opportunity.montantCaution">Montant Caution</span></dt>
+                <dd>
+                    <span>{{ opportunity.montantCaution }}</span>
+                </dd>
+                <dt><span jhiTranslate="btpprojectApp.opportunity.objetAffaire">Objet Affaire</span></dt>
+                <dd>
+                    <span>{{ opportunity.objetAffaire }}</span>
+                </dd>
+                <dt><span jhiTranslate="btpprojectApp.opportunity.estimationBudget">Estimation Budget</span></dt>
+                <dd>
+                    <span>{{ opportunity.estimationBudget }}</span>
+                </dd>
+                <dt><span jhiTranslate="btpprojectApp.opportunity.commentaires">Commentaires</span></dt>
+                <dd>
+                    <span>{{ opportunity.commentaires }}</span>
+                </dd>
+                <dt><span jhiTranslate="btpprojectApp.opportunity.maitreOuvrage">Maitre Ouvrage</span></dt>
+                <dd>
+                    <div *ngIf="opportunity.maitreOuvrage">
+                        <a [routerLink]="['/maitre-ouvrage', opportunity.maitreOuvrage?.id, 'view']">{{ opportunity.maitreOuvrage?.nom }}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="btpprojectApp.opportunity.caution">Caution</span></dt>
+                <dd>
+                    <div *ngIf="opportunity.caution">
+                        <a [routerLink]="['/caution', opportunity.caution?.id, 'view']">{{ opportunity.caution?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/opportunity', opportunity.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

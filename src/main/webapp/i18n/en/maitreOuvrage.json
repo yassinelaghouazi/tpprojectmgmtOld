@@ -1,0 +1,26 @@
+{
+  "btpprojectApp": {
+    "maitreOuvrage": {
+      "home": {
+        "title": "Maitre Ouvrages",
+        "createLabel": "Create a new Maitre Ouvrage",
+        "createOrEditLabel": "Create or edit a Maitre Ouvrage",
+        "search": "Search for Maitre Ouvrage",
+        "notFound": "No Maitre Ouvrages found"
+      },
+      "created": "A new Maitre Ouvrage is created with identifier {{ param }}",
+      "updated": "A Maitre Ouvrage is updated with identifier {{ param }}",
+      "deleted": "A Maitre Ouvrage is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Maitre Ouvrage {{ id }}?"
+      },
+      "detail": {
+        "title": "Maitre Ouvrage"
+      },
+      "nom": "Nom",
+      "email": "Email",
+      "tel": "Tel",
+      "contactPersonne": "Contact Personne"
+    }
+  }
+}

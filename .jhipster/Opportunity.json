@@ -1,0 +1,69 @@
+{
+    "name": "Opportunity",
+    "fields": [
+        {
+            "fieldName": "numeroAppelOffre",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "dateRemisePlis",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "montantCaution",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "objetAffaire",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "estimationBudget",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "commentaires",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipName": "maitreOuvrage",
+            "otherEntityName": "maitreOuvrage",
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": [
+                "required"
+            ],
+            "otherEntityField": "nom",
+            "otherEntityRelationshipName": "opportunity"
+        },
+        {
+            "relationshipName": "caution",
+            "otherEntityName": "caution",
+            "relationshipType": "one-to-one",
+            "relationshipValidateRules": [
+                "required"
+            ],
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "useJPADerivedIdentifier": false,
+            "otherEntityRelationshipName": "opportunity"
+        }
+    ],
+    "changelogDate": "20200317093700",
+    "entityTableName": "opportunity",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*",
+    "searchEngine": "elasticsearch",
+    "databaseType": "sql"
+}

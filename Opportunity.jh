@@ -1,0 +1,9 @@
+entity Opportunity {
+	
+  numeroAppelOffre String required,
+  dateRemisePlis LocalDate,
+  montantCaution Double ,
+  objetAffaire String,
+  estimationBudget Double,
+  commentaires String
+}

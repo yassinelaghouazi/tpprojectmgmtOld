@@ -1,0 +1,164 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-caution-heading" jhiTranslate="btpprojectApp.caution.home.createOrEditLabel">Create or edit a Caution</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <table style="width: 100%;">
+                    <tr>
+                        <td>
+                            <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                                <label for="id" jhiTranslate="global.field.id">ID</label>
+                                <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <label class="form-control-label" jhiTranslate="btpprojectApp.caution.numeroCaution" for="field_numeroCaution">Numero Caution</label>
+                                <input type="text" class="form-control" name="numeroCaution" id="field_numeroCaution"
+                                    formControlName="numeroCaution"/>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>   
+                            <div class="form-group">
+                                <label class="form-control-label" jhiTranslate="btpprojectApp.caution.numeroAppelOffre" for="field_numeroAppelOffre">Numero Appel Offre</label>
+                                <input type="text" class="form-control" name="numeroAppelOffre" id="field_numeroAppelOffre"
+                                    formControlName="numeroAppelOffre"/>
+                            </div>
+                        </td>   
+                        <td>
+                            <div class="form-group">
+                                <label class="form-control-label" jhiTranslate="btpprojectApp.caution.numeroMarche" for="field_numeroMarche">Numero Marche</label>
+                                <input type="text" class="form-control" name="numeroMarche" id="field_numeroMarche"
+                                    formControlName="numeroMarche"/>
+                            </div>
+                        </td>
+                    </tr>    
+                    <tr>
+                        <td>
+                            <div class="form-group">
+                                <label class="form-control-label" jhiTranslate="btpprojectApp.caution.objetCaution" for="field_objetCaution">Objet Caution</label>
+                                <input type="text" class="form-control" name="objetCaution" id="field_objetCaution"
+                                    formControlName="objetCaution"/>
+                            </div>
+                        </td>
+                        <td>      
+                            <div class="form-group">
+                                <label class="form-control-label" jhiTranslate="btpprojectApp.caution.typeCaution" for="field_typeCaution">Type Caution</label>
+                                <select class="form-control" name="typeCaution" formControlName="typeCaution" id="field_typeCaution">
+                                    <option value="PROVISOIRE">{{ 'btpprojectApp.TypeCaution.PROVISOIRE' | translate }}</option>
+                                    <option value="DEFINITIVE">{{ 'btpprojectApp.TypeCaution.DEFINITIVE' | translate }}</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>       
+                    <tr>
+                        <td>
+                            <div class="form-group">
+                                <label class="form-control-label" jhiTranslate="btpprojectApp.caution.montantCaution" for="field_montantCaution">Montant Caution</label>
+                                <input type="number" class="form-control" name="montantCaution" id="field_montantCaution"
+                                    formControlName="montantCaution"/>
+                            </div>
+                        </td>
+                        <td>    
+
+                            <div class="form-group">
+                                <label class="form-control-label" jhiTranslate="btpprojectApp.caution.statusCaution" for="field_statusCaution">Status Caution</label>
+                                <select class="form-control" name="statusCaution" formControlName="statusCaution" id="field_statusCaution">
+                                    <option value="DEMANDEE">{{ 'btpprojectApp.StatusCaution.DEMANDEE' | translate }}</option>
+                                    <option value="DEPOSEE">{{ 'btpprojectApp.StatusCaution.DEPOSEE' | translate }}</option>
+                                    <option value="RETOURNEE">{{ 'btpprojectApp.StatusCaution.RETOURNEE' | translate }}</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>      
+                    <tr>
+                        <td>
+                            <div class="form-group">
+                                <label class="form-control-label" jhiTranslate="btpprojectApp.caution.maitreOuvrage" for="field_maitreOuvrage">Maitre Ouvrage</label>
+                                <select class="form-control" id="field_maitreOuvrage" name="maitreOuvrage" formControlName="maitreOuvrage">
+                                    <option *ngIf="!editForm.get('maitreOuvrage')!.value" [ngValue]="null" selected></option>
+                                    <option [ngValue]="maitreOuvrageOption.id === editForm.get('maitreOuvrage')!.value?.id ? editForm.get('maitreOuvrage')!.value : maitreOuvrageOption" *ngFor="let maitreOuvrageOption of maitreouvrages; trackBy: trackById">{{ maitreOuvrageOption.nom }}</option>
+                                </select>
+                            </div>
+                            <div *ngIf="editForm.get('maitreOuvrage')!.invalid && (editForm.get('maitreOuvrage')!.dirty || editForm.get('maitreOuvrage')!.touched)">
+                                <small class="form-text text-danger"
+                                    *ngIf="editForm.get('maitreOuvrage')?.errors?.required" jhiTranslate="entity.validation.required">
+                                    This field is required.
+                                </small>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <label class="form-control-label" jhiTranslate="btpprojectApp.caution.dateDemande" for="field_dateDemande">Date Demande</label>
+                                <div class="input-group">
+                                    <input id="field_dateDemande" type="text" class="form-control" name="dateDemande" ngbDatepicker #dateDemandeDp="ngbDatepicker" formControlName="dateDemande"/>
+                                    <span class="input-group-append">
+                                        <button type="button" class="btn btn-secondary" (click)="dateDemandeDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+                                    </span>
+                                </div>
+                            </div>
+                        </td>
+                        
+                    </tr>       
+                    <tr>
+                        
+                        <td>
+                            <div class="form-group">
+                                <label class="form-control-label" jhiTranslate="btpprojectApp.caution.banque" for="field_banque">Banque</label>
+                                <select class="form-control" id="field_banque" name="banque" formControlName="banque">
+                                    <option *ngIf="!editForm.get('banque')!.value" [ngValue]="null" selected></option>
+                                    <option [ngValue]="banqueOption.id === editForm.get('banque')!.value?.id ? editForm.get('banque')!.value : banqueOption" *ngFor="let banqueOption of banques; trackBy: trackById">{{ banqueOption.banque }}</option>
+                                </select>
+                            </div>
+                            <div *ngIf="editForm.get('banque')!.invalid && (editForm.get('banque')!.dirty || editForm.get('banque')!.touched)">
+                                <small class="form-text text-danger"
+                                    *ngIf="editForm.get('banque')?.errors?.required" jhiTranslate="entity.validation.required">
+                                    This field is required.
+                                </small>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <label class="form-control-label" jhiTranslate="btpprojectApp.caution.dateDepot" for="field_dateDepot">Date Depot</label>
+                                <div class="input-group">
+                                    <input id="field_dateDepot" type="text" class="form-control" name="dateDepot" ngbDatepicker #dateDepotDp="ngbDatepicker" formControlName="dateDepot"/>
+                                    <span class="input-group-append">
+                                        <button type="button" class="btn btn-secondary" (click)="dateDepotDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+                                    </span>
+                                </div>
+                            </div>
+                        </td>    
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form-group">
+                                <label class="form-control-label" jhiTranslate="btpprojectApp.caution.dateRetrait" for="field_dateRetrait">Date Retrait</label>
+                                <div class="input-group">
+                                    <input id="field_dateRetrait" type="text" class="form-control" name="dateRetrait" ngbDatepicker #dateRetraitDp="ngbDatepicker" formControlName="dateRetrait"/>
+                                    <span class="input-group-append">
+                                        <button type="button" class="btn btn-secondary" (click)="dateRetraitDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+                                    </span>
+                                </div>
+                            </div>
+                        </td>
+                       
+                    </tr>
+                 </table>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

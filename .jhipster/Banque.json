@@ -1,0 +1,36 @@
+{
+    "name": "Banque",
+    "fields": [
+        {
+            "fieldName": "banque",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "contactEmail",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "contactTel",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "adresseAgence",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20200319184600",
+    "entityTableName": "banque",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

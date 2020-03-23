@@ -1,0 +1,34 @@
+{
+  "btpprojectApp": {
+    "caution": {
+      "home": {
+        "title": "Cautions",
+        "createLabel": "Créer une nouvelle Caution",
+        "createOrEditLabel": "Créer ou éditer une caution",
+        "search": "Recherche pour Caution",
+        "notFound": "Aucune Caution trouvée"
+      },
+      "created": "Une nouvelle caution a été créée avec l'identifiant {{ param }}",
+      "updated": "La Caution avec l'identifiant {{ param }} a été mise à jour",
+      "deleted": "La Caution avec l'identifiant {{ param }} a été supprimée",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer la Caution {{ id }} ?"
+      },
+      "detail": {
+        "title": "Caution"
+      },
+      "numeroCaution": "Numéro de la caution :",
+      "numeroAppelOffre": "N° de l'AO :",
+      "numeroMarche": "Numéro du marché :",
+      "objetCaution": "Objet de la caution :",
+      "typeCaution": "Type de la caution :",
+      "montantCaution": "Montant de la caution :",
+      "statusCaution": "Statut de la caution :",
+      "dateDemande": "Date de demande :",
+      "dateRetrait": "Date de retrait :",
+      "dateDepot": "Date de dépôt :",
+      "banque": "Banque :",
+      "maitreOuvrage": "Maitre d'ouvrage :"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+entity Banque {
+	
+  banque String required,
+  contactEmail String,
+  contactTel String,
+  adresseAgence String,
+  
+    
+}
