@@ -2,8 +2,8 @@
   "btpprojectApp": {
     "TypeCaution": {
       "null": "",
-      "PROVISOIRE": "PROVISOIRE",
-      "DEFINITIVE": "DEFINITIVE"
+      "PROVISOIRE": "Provisoire",
+      "DEFINITIVE": "Définitive"
     }
   }
 }

@@ -17,6 +17,25 @@
       "detail": {
         "title": "Caution"
       },
+      "sub": {
+        "title": "Caution"
+      },
+      "liste": {
+        "id": "ID",
+        "numeroCaution": "Numéro de la caution",
+        "numeroAppelOffre": "N° de l'AO",
+        "numeroMarche": "Numéro du marché",
+        "objetCaution": "Objet de la caution",
+        "typeCaution": "Type de la caution",
+        "montantCaution": "Montant de la caution",
+        "statusCaution": "Statut de la caution",
+        "dateDemande": "Date de demande",
+        "dateRetrait": "Date de retrait",
+        "dateDepot": "Date de dépôt",
+        "banque": "Banque",
+        "maitreOuvrage": "Maitre d'ouvrage"
+      },
+      "id": "ID :",
       "numeroCaution": "Numéro de la caution :",
       "numeroAppelOffre": "N° de l'AO :",
       "numeroMarche": "Numéro du marché :",

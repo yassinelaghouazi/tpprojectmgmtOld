@@ -3,28 +3,40 @@
     "opportunity": {
       "home": {
         "title": "Opportunities",
-        "createLabel": "Créer un nouveau Opportunity",
+        "createLabel": "Créer une nouvelle Opportunité",
         "createOrEditLabel": "Créer ou éditer une opportunité d'affaire",
-        "search": "Recherche pour Opportunity",
-        "notFound": "Aucun Opportunity trouvé"
+        "search": "Recherche pour Opportunité",
+        "notFound": "Aucune Opportunité trouvée"
       },
-      "created": "Un nouveau Opportunity a été créé avec l'identifiant {{ param }}",
-      "updated": "Le Opportunity avec l'identifiant {{ param }} a été mis à jour",
-      "deleted": "Le Opportunity avec l'identifiant {{ param }} a été supprimé",
+      "created": "Une nouvelle Opportunité a été créée avec l'identifiant {{ param }}",
+      "updated": "L'opportunité avec l'identifiant {{ param }} a été mise à jour",
+      "deleted": "L'Opportunité avec l'identifiant {{ param }} a été supprimée",
       "delete": {
-        "question": "Etes-vous certain de vouloir supprimer le Opportunity {{ id }} ?"
+        "question": "Etes-vous certain de vouloir supprimer l'opportunité {{ id }} ?"
       },
       "detail": {
-        "title": "Opportunity"
+        "title": "Opportunité"
       },
-      "numeroAppelOffre": "N° de l'A.O",
-      "dateRemisePlis": "Date de remise de plis",
-      "montantCaution": "Montant de la caution",
-      "objetAffaire": "Objet de l'affaire",
-      "estimationBudget": "Estimation du budget",
-      "commentaires": "Commentaires",
-      "maitreOuvrage": "Maitre d'ouvrage",
-      "caution": "Caution"
+      "liste": {
+        "id": "ID",
+        "numeroAppelOffre": "N° de l'A.O",
+        "dateRemisePlis": "Date de remise de plis",
+        "montantCaution": "Montant de la caution",
+        "objetAffaire": "Objet de l'affaire",
+        "estimationBudget": "Estimation du budget",
+        "commentaires": "Commentaires",
+        "maitreOuvrage": "Maitre d'ouvrage",
+        "caution": "Caution"
+      },
+      "id": "ID :",
+      "numeroAppelOffre": "N° de l'A.O :",
+      "dateRemisePlis": "Date de remise de plis :",
+      "montantCaution": "Montant de la caution :",
+      "objetAffaire": "Objet de l'affaire :",
+      "estimationBudget": "Estimation du budget :",
+      "commentaires": "Commentaires :",
+      "maitreOuvrage": "Maitre d'ouvrage :",
+      "caution": "Caution :"
     }
   }
 }

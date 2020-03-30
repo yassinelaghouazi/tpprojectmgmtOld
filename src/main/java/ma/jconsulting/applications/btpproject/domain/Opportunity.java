@@ -51,7 +51,7 @@ public class Opportunity implements Serializable {
     @JsonIgnoreProperties("opportunities")
     private MaitreOuvrage maitreOuvrage;
 
-    @OneToOne(optional = false)
+    @OneToOne(optional = false,cascade={CascadeType.PERSIST, CascadeType.REMOVE})
     @NotNull
     @JoinColumn(unique = true)
     private Caution caution;

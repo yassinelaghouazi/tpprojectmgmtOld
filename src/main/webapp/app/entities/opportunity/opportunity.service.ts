@@ -8,6 +8,8 @@ import { DATE_FORMAT } from 'app/shared/constants/input.constants';
 import { SERVER_API_URL } from 'app/app.constants';
 import { createRequestOption, Search } from 'app/shared/util/request-util';
 import { IOpportunity } from 'app/shared/model/opportunity.model';
+import { Caution } from 'app/shared/model/caution.model';
+// import { ICaution } from 'app/shared/model/caution.model';
 
 type EntityResponseType = HttpResponse<IOpportunity>;
 type EntityArrayResponseType = HttpResponse<IOpportunity[]>;
@@ -68,6 +70,9 @@ export class OpportunityService {
   protected convertDateFromServer(res: EntityResponseType): EntityResponseType {
     if (res.body) {
       res.body.dateRemisePlis = res.body.dateRemisePlis ? moment(res.body.dateRemisePlis) : undefined;
+      (res.body.caution as Caution).dateDemande = res.body.caution?.dateDemande ? moment(res.body.caution?.dateDemande) : undefined;
+      (res.body.caution as Caution).dateDepot = res.body.caution?.dateDepot ? moment(res.body.caution?.dateDepot) : undefined;
+      (res.body.caution as Caution).dateRetrait = res.body.caution?.dateRetrait ? moment(res.body.caution?.dateRetrait) : undefined;
     }
     return res;
   }
@@ -76,6 +81,10 @@ export class OpportunityService {
     if (res.body) {
       res.body.forEach((opportunity: IOpportunity) => {
         opportunity.dateRemisePlis = opportunity.dateRemisePlis ? moment(opportunity.dateRemisePlis) : undefined;
+        // onst caution: Caution = opportunity.caution;
+        // caution.dateDemande = caution.dateDemande ? moment(caution.dateDemande) : undefined;
+        // caution.dateDepot = caution.dateDepot ? moment(caution.dateDepot) : undefined;
+        // caution.dateRetrait = caution.dateRetrait ? moment(caution.dateRetrait) : undefined;
       });
     }
     return res;

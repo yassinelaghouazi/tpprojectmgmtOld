@@ -47,7 +47,7 @@
     "autoprefixer": "9.7.3",
     "base-href-webpack-plugin": "2.0.0",
     "browser-sync": "2.26.7",
-    "browser-sync-webpack-plugin": "2.2.2",
+    "browser-sync-webpack-plugin": "^2.2.2",
     "codelyzer": "5.2.0",
     "copy-webpack-plugin": "5.1.1",
     "css-loader": "3.3.2",

@@ -58,6 +58,9 @@ export class CautionService {
   }
 
   protected convertDateFromClient(caution: ICaution): ICaution {
+    /* eslint-disable no-console */
+    console.log(caution.dateDemande);
+    /* eslint-enable no-console */
     const copy: ICaution = Object.assign({}, caution, {
       dateDemande: caution.dateDemande && caution.dateDemande.isValid() ? caution.dateDemande.format(DATE_FORMAT) : undefined,
       dateRetrait: caution.dateRetrait && caution.dateRetrait.isValid() ? caution.dateRetrait.format(DATE_FORMAT) : undefined,
@@ -68,6 +71,9 @@ export class CautionService {
 
   protected convertDateFromServer(res: EntityResponseType): EntityResponseType {
     if (res.body) {
+      /* eslint-disable no-console */
+      console.log('res.body.dateDemande : ' + res.body.dateDemande);
+      /* eslint-enable no-console */
       res.body.dateDemande = res.body.dateDemande ? moment(res.body.dateDemande) : undefined;
       res.body.dateRetrait = res.body.dateRetrait ? moment(res.body.dateRetrait) : undefined;
       res.body.dateDepot = res.body.dateDepot ? moment(res.body.dateDepot) : undefined;
@@ -78,6 +84,9 @@ export class CautionService {
   protected convertDateArrayFromServer(res: EntityArrayResponseType): EntityArrayResponseType {
     if (res.body) {
       res.body.forEach((caution: ICaution) => {
+        /* eslint-disable no-console */
+        console.log('convertDateArrayFromServer caution.dateDemande : ' + caution.dateDemande);
+        /* eslint-enable no-console */
         caution.dateDemande = caution.dateDemande ? moment(caution.dateDemande) : undefined;
         caution.dateRetrait = caution.dateRetrait ? moment(caution.dateRetrait) : undefined;
         caution.dateDepot = caution.dateDepot ? moment(caution.dateDepot) : undefined;

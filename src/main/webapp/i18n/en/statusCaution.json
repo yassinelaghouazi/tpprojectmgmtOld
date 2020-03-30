@@ -2,9 +2,9 @@
   "btpprojectApp": {
     "StatusCaution": {
       "null": "",
-      "DEMANDEE": "DEMANDEE",
-      "DEPOSEE": "DEPOSEE",
-      "RETOURNEE": "RETOURNEE"
+      "DEMANDEE": "Demande de caution",
+      "DEPOSEE": "Caution",
+      "RETOURNEE": "Retournée"
     }
   }
 }
