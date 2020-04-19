@@ -1,0 +1,7 @@
+C:\Users\Yassine\AppData\Roaming\npm\ng -> C:\Users\Yassine\AppData\Roaming\npm\node_modules\@angular\cli\bin\ng
+
+> @angular/cli@9.0.7 postinstall C:\Users\Yassine\AppData\Roaming\npm\node_modules\@angular\cli
+> node ./bin/postinstall/script.js
+
++ @angular/cli@9.0.7
+updated 5 packages in 71.497s

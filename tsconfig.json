@@ -18,7 +18,6 @@
     "paths": {
       "app/*": ["src/main/webapp/app/*"]
     },
-    "strictPropertyInitialization": false,
     "importHelpers": true
   },
   "angularCompilerOptions": {

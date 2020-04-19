@@ -4,6 +4,9 @@ import * as moment from 'moment';
 import { DATE_FORMAT } from 'app/shared/constants/input.constants';
 import { OpportunityService } from 'app/entities/opportunity/opportunity.service';
 import { IOpportunity, Opportunity } from 'app/shared/model/opportunity.model';
+import { Caution } from 'app/shared/model/caution.model';
+import { TypeCaution } from 'app/shared/model/enumerations/type-caution.model';
+import { StatusCaution } from 'app/shared/model/enumerations/status-caution.model';
 
 describe('Service Tests', () => {
   describe('Opportunity Service', () => {
@@ -25,6 +28,22 @@ describe('Service Tests', () => {
       currentDate = moment();
 
       elemDefault = new Opportunity(0, 'AAAAAAA', currentDate, 0, 'AAAAAAA', 0, 'AAAAAAA');
+      const caution: Caution = new Caution(
+        0,
+        '123456789',
+        '123456',
+        '1234',
+        '123',
+        TypeCaution.DEFINITIVE,
+        1000000,
+        StatusCaution.DEMANDEE,
+        currentDate,
+        currentDate,
+        currentDate,
+        undefined,
+        undefined
+      );
+      elemDefault.caution = caution;
     });
 
     describe('Service methods', () => {

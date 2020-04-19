@@ -103,14 +103,14 @@ public class OpportunityResourceIT {
         }
         opportunity.setMaitreOuvrage(maitreOuvrage);
         // Add required entity
-        Caution caution;
-        if (TestUtil.findAll(em, Caution.class).isEmpty()) {
-            caution = CautionResourceIT.createEntity(em);
-            em.persist(caution);
-            em.flush();
-        } else {
-            caution = TestUtil.findAll(em, Caution.class).get(0);
-        }
+        Caution caution = CautionResourceIT.createEntity(em);
+        // if (TestUtil.findAll(em, Caution.class).isEmpty()) {
+        //     caution = CautionResourceIT.createEntity(em);
+        //     em.persist(caution);
+        //     em.flush();
+        // } else {
+        //     caution = TestUtil.findAll(em, Caution.class).get(0);
+        // }
         opportunity.setCaution(caution);
         return opportunity;
     }
